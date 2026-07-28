@@ -1,0 +1,74 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilos Base (Mobile First) */
+body {
+    background-image: url('fotos/descarga.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    /* Margen de seguridad para celulares */
+}
+
+/* Contenedor central - Diseño base para celulares */
+.hero {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    border-radius: 15px;
+    background: white;
+    /* Fondo blanco simple para el cartel */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 400px;
+}
+
+.title {
+    font-size: 2.5rem;
+    /* Tamaño optimizado para pantallas pequeñas */
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #4a4a4a;
+}
+
+/* ========================================================
+   Media Queries (Tablets y Desktop)
+   ======================================================== */
+@media (min-width: 768px) {
+    body {
+        padding: 2rem;
+    }
+
+    .hero {
+        padding: 4rem;
+        max-width: 600px;
+        border-radius: 20px;
+    }
+
+    .title {
+        font-size: 4rem;
+        letter-spacing: 2px;
+        margin-bottom: 1rem;
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+    }
+}
