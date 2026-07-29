@@ -1,67 +1,211 @@
+/* Importamos fuentes elegantes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;1,600&display=swap');
+
 /* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
-/* Estilos Base (Mobile First) */
+/* Estilos Base */
 body {
     background-image: url('fotos/descarga.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    min-height: 100vh;
+    overflow-x: hidden;
+    /* Evita scrolls horizontales indeseados */
+}
+
+/* Estilo común para las secciones */
+section {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
-    /* Margen de seguridad para celulares */
-}
-
-/* Contenedor central - Diseño base para celulares */
-.hero {
+    padding: 4rem 2rem;
+    /* Espaciado normal, no de pantalla completa */
     text-align: center;
-    padding: 2rem 1.5rem;
-    border-radius: 15px;
-    background: white;
-    /* Fondo blanco simple para el cartel */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
     width: 100%;
-    max-width: 400px;
 }
 
+/* La portada principal ocupa la pantalla inicial completa */
+.hero {
+    min-height: 100vh;
+}
+
+/* --- TEXTOS PRINCIPALES --- */
 .title {
-    font-size: 2.5rem;
-    /* Tamaño optimizado para pantallas pequeñas */
-    font-weight: 300;
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-style: italic;
+    font-weight: 600;
     letter-spacing: 1px;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
     color: #1a1a1a;
+    text-transform: capitalize;
 }
 
 .subtitle {
-    font-size: 1.1rem;
-    font-weight: 400;
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 6px;
+    text-transform: uppercase;
     color: #4a4a4a;
 }
 
-/* ========================================================
-   Media Queries (Tablets y Desktop)
-   ======================================================== */
+.date {
+    font-family: 'Montserrat', sans-serif;
+    /* Mismo estilo que XV */
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #1a1a1a;
+    margin-top: 1rem;
+}
+
+/* --- ANIMACIONES INICIALES DE LA PORTADA --- */
+.hero .title {
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.hero .subtitle {
+    animation: fadeInUp 1s ease-out 0.3s forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.hero .date {
+    animation: fadeInUp 1s ease-out 0.6s forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- ANIMACIONES AL SCROLLEAR (REVEAL) --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- SECCIÓN CUENTA REGRESIVA --- */
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-style: italic;
+    color: #1a1a1a;
+    margin-bottom: 2rem;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.time-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 0.8rem;
+    min-width: 65px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.time-box span:first-child {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    line-height: 1;
+}
+
+.time-box .label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #4a4a4a;
+    margin-top: 0.4rem;
+}
+
+.countdown-wrapper {
+    background: rgba(230, 230, 230, 0.7); /* Color sutil plateado/claro */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 2.5rem 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+}
+
+/* --- UBICACIÓN --- */
+.location-content {
+    background: rgba(255, 255, 255, 0.85); /* Recuadro elegante y legible */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    padding: 2.5rem 1.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.venue-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.venue-address {
+    font-size: 1.1rem;
+    color: #4a4a4a;
+    margin-bottom: 0.3rem;
+}
+
+.venue-date {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+}
+
+.map-container {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden; /* Redondea los bordes del mapa interno */
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+/* --- MEDIA QUERIES --- */
 @media (min-width: 768px) {
-    body {
-        padding: 2rem;
-    }
-
-    .hero {
-        padding: 4rem;
-        max-width: 600px;
-        border-radius: 20px;
-    }
-
     .title {
         font-size: 4rem;
         letter-spacing: 2px;
@@ -70,5 +214,31 @@ body {
 
     .subtitle {
         font-size: 1.5rem;
+    }
+
+    .date {
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 3rem;
+    }
+
+    .countdown {
+        gap: 1.5rem;
+    }
+
+    .time-box {
+        min-width: 90px;
+        padding: 1.2rem;
+    }
+
+    .time-box span:first-child {
+        font-size: 2.2rem;
+    }
+
+    .time-box .label {
+        font-size: 0.9rem;
     }
 }

@@ -9,10 +9,55 @@
 </head>
 
 <body>
-    <div class="hero">
-        <h1 class="title">ema mogul</h1>
+    <!-- Portada principal (Pantalla 1) -->
+    <section class="hero">
+        <h1 class="title">ema</h1>
         <p class="subtitle">xv</p>
-    </div>
+        <p class="date">12 de Septiembre</p>
+    </section>
+
+    <!-- Sección Cuenta Regresiva (Pantalla 2, separada) -->
+    <section class="countdown-section">
+        <div class="countdown-wrapper reveal">
+            <h2 class="section-title">Falta muy poco</h2>
+            <div class="countdown">
+                <div class="time-box">
+                    <span id="days">00</span>
+                    <span class="label">Días</span>
+                </div>
+                <div class="time-box">
+                    <span id="hours">00</span>
+                    <span class="label">Hs</span>
+                </div>
+                <div class="time-box">
+                    <span id="minutes">00</span>
+                    <span class="label">Min</span>
+                </div>
+                <div class="time-box">
+                    <span id="seconds">00</span>
+                    <span class="label">Seg</span>
+                </div>
+            </div>
+    </section>
+
+    <!-- UBICACIÓN -->
+    <section class="location-section reveal">
+        <h2 class="section-title">Dónde</h2>
+        <div class="location-content">
+            <div class="address">
+                <p class="venue-name">Salón de Eventos "El Nogal"</p>
+                <p class="venue-address">C. 79 y 10, Balcarce</p>
+                <p class="venue-date">12 de Septiembre, 2026 - 21:00 hs</p>
+            </div>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1574.8506624107922!2d-58.2911722!3d-37.8672784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959aa9004ddd8dc3%3A0xb935e08a7a531faa!2sEl%20Nogal%20Eventos!5e0!3m2!1ses-419!2sar!4v1768310263513!5m2!1ses-419!2sar"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
     <script src="script.js"></script>
 </body>
 
