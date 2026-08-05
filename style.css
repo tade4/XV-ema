@@ -17,23 +17,20 @@ body {
     /* Color de base mientras carga la imagen */
 }
 
-/* FIX: El fondo en un pseudo-elemento fijo evita el bug blanco y saltos en móviles */
+/* FIX DEFINITIVO: Hacemos que el fondo sobresaliga de la pantalla.
+   Así, si el celular oculta la barra de búsqueda y la pantalla "crece", nunca verá el borde blanco. */
 body::before {
     content: "";
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    height: 100dvh;
-    /* dvh se adapta dinámicamente a la barra de direcciones del celular */
+    top: -15vh;
+    left: -15vw;
+    width: 130vw;
+    height: 130vh;
     background-image: url('fotos/descarga.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     z-index: -1;
-    will-change: transform;
-    /* Mejora el rendimiento en celulares */
 }
 
 /* Estilo común para las secciones */
@@ -51,8 +48,8 @@ section {
 /* La portada principal ocupa la pantalla inicial completa */
 .hero {
     min-height: 100vh;
-    min-height: 100dvh;
-    /* Evita el salto cuando se esconde la barra del navegador */
+    min-height: 100svh;
+    /* svh (Small Viewport Height) mantiene la altura estática, evitando que todo salte al bajar */
 }
 
 /* --- TEXTOS PRINCIPALES --- */
