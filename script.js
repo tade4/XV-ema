@@ -55,3 +55,29 @@ const revealObserver = new IntersectionObserver(revealCallback, revealOptions);
 
 // Observamos cada elemento
 revealElements.forEach(el => revealObserver.observe(el));
+
+// --- Función para copiar CVU/Alias ---
+function copyToClipboard(elementId) {
+    // Obtenemos el texto del elemento (el número de CVU o el Alias)
+    const textToCopy = document.getElementById(elementId).innerText;
+
+    // Usamos la API del portapapeles para copiarlo
+    navigator.clipboard.writeText(textToCopy).then(() => {
+        // Buscamos el botón que fue clickeado (el que está justo después del texto)
+        const button = document.getElementById(elementId).nextElementSibling;
+        const originalText = "Copiar";
+
+        // Cambiamos el texto temporalmente para dar feedback visual
+        button.innerText = "¡Copiado!";
+        button.style.background = "#28a745"; // Verde de éxito
+
+        // Restauramos el botón a la normalidad después de 2 segundos
+        setTimeout(() => {
+            button.innerText = originalText;
+            button.style.background = ""; // Vuelve a su color de CSS original
+        }, 2000);
+    }).catch(err => {
+        console.error('Error al copiar: ', err);
+        alert("No se pudo copiar. Inténtalo seleccionando el texto manualmente.");
+    });
+}

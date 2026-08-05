@@ -224,6 +224,84 @@ section {
     border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
+/* --- REGALOS --- */
+.gifts-content {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    padding: 2.5rem 1.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.gifts-text {
+    font-size: 1.1rem;
+    color: #4a4a4a;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.bank-data {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.data-box {
+    background: rgba(230, 230, 230, 0.5);
+    padding: 1rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.data-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #4a4a4a;
+    font-weight: 600;
+}
+
+.data-value {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    letter-spacing: 1px;
+    word-break: break-all;
+}
+
+.copy-btn {
+    margin-top: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    background: #1a1a1a;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+    background: #4a4a4a;
+    transform: translateY(-2px);
+}
+
+.copy-btn:active {
+    transform: translateY(0);
+}
+
 /* --- MEDIA QUERIES --- */
 @media (min-width: 768px) {
     .title {
