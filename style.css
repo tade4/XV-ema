@@ -11,13 +11,29 @@
 
 /* Estilos Base */
 body {
+    overflow-x: hidden;
+    /* Evita scrolls horizontales indeseados */
+    background-color: #d3d3d3;
+    /* Color de base mientras carga la imagen */
+}
+
+/* FIX: El fondo en un pseudo-elemento fijo evita el bug blanco y saltos en móviles */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    /* dvh se adapta dinámicamente a la barra de direcciones del celular */
     background-image: url('fotos/descarga.webp');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     background-repeat: no-repeat;
-    overflow-x: hidden;
-    /* Evita scrolls horizontales indeseados */
+    z-index: -1;
+    will-change: transform;
+    /* Mejora el rendimiento en celulares */
 }
 
 /* Estilo común para las secciones */
@@ -35,6 +51,8 @@ section {
 /* La portada principal ocupa la pantalla inicial completa */
 .hero {
     min-height: 100vh;
+    min-height: 100dvh;
+    /* Evita el salto cuando se esconde la barra del navegador */
 }
 
 /* --- TEXTOS PRINCIPALES --- */
@@ -97,8 +115,10 @@ section {
 /* --- ANIMACIONES AL SCROLLEAR (REVEAL) --- */
 .reveal {
     opacity: 0;
-    transform: translateY(50px);
-    transition: all 1s ease-out;
+    transform: translateY(30px);
+    /* Menor distancia para que aparezca antes */
+    transition: all 0.6s ease-out;
+    /* Animación más rápida para que no se sienta que "tarda" */
 }
 
 .reveal.active {
@@ -151,7 +171,8 @@ section {
 }
 
 .countdown-wrapper {
-    background: rgba(230, 230, 230, 0.7); /* Color sutil plateado/claro */
+    background: rgba(230, 230, 230, 0.7);
+    /* Color sutil plateado/claro */
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.5);
@@ -164,7 +185,8 @@ section {
 
 /* --- UBICACIÓN --- */
 .location-content {
-    background: rgba(255, 255, 255, 0.85); /* Recuadro elegante y legible */
+    background: rgba(255, 255, 255, 0.85);
+    /* Recuadro elegante y legible */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.6);
@@ -200,7 +222,8 @@ section {
 .map-container {
     width: 100%;
     border-radius: 12px;
-    overflow: hidden; /* Redondea los bordes del mapa interno */
+    overflow: hidden;
+    /* Redondea los bordes del mapa interno */
     border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
