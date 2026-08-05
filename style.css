@@ -302,6 +302,83 @@ section {
     transform: translateY(0);
 }
 
+/* --- DIVISORES DE SECCIÓN --- */
+.divider {
+    width: 60%;
+    max-width: 300px;
+    height: 2px;
+    /* Un degradado elegante de transparente a blanco y de vuelta a transparente */
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(3, 3, 3, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
+    margin: 0 auto;
+    border: none;
+}
+
+/* --- ASISTENCIA (RSVP) --- */
+.rsvp-content {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    padding: 2.5rem 1.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.important-notice {
+    background: rgba(230, 230, 230, 0.5);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    text-align: center;
+    width: 100%;
+}
+
+.important-title {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.important-text {
+    font-size: 1rem;
+    color: #4a4a4a;
+    line-height: 1.4;
+}
+
+.whatsapp-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #1a1a1a;
+    /* Botón oscuro y elegante por defecto */
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 30px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-btn:hover {
+    background: #25D366;
+    /* Se pinta de verde WhatsApp al pasar el dedo/mouse */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
 /* --- MEDIA QUERIES --- */
 @media (min-width: 768px) {
     .title {
