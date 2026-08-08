@@ -50,6 +50,14 @@ section {
     min-height: 100vh;
     min-height: 100svh;
     /* svh (Small Viewport Height) mantiene la altura estática, evitando que todo salte al bajar */
+
+    /* Agregamos una capa oscura (overlay) semitransparente sobre la foto para que el texto resalte al 100% */
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+        url('fotos/portada.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* --- TEXTOS PRINCIPALES --- */
@@ -60,8 +68,10 @@ section {
     font-weight: 600;
     letter-spacing: 1px;
     margin-bottom: 0.2rem;
-    color: #1a1a1a;
+    color: #ffffff;
     text-transform: capitalize;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.8);
+    /* Sombra para que lea perfecto sobre partes blancas */
 }
 
 .subtitle {
@@ -69,7 +79,8 @@ section {
     font-weight: 300;
     letter-spacing: 6px;
     text-transform: uppercase;
-    color: #4a4a4a;
+    color: #aeaeae;
+    text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 .date {
@@ -79,8 +90,9 @@ section {
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: #1a1a1a;
+    color: #aeabab;
     margin-top: 1rem;
+    text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 /* --- ANIMACIONES INICIALES DE LA PORTADA --- */
