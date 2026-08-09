@@ -251,6 +251,61 @@ section {
     border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
+/* --- GALERÍA DE FOTOS (Momentos) --- */
+.gallery-content {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    padding: 1.5rem 0.5rem;
+    /* Menos padding lateral para aprovechar el espacio de las fotos */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.gallery-container {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 1rem;
+
+    /* Ocultar barra de scroll en navegadores modernos pero permitir deslizar */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge */
+}
+
+.gallery-container::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
+
+.gallery-item {
+    flex: 0 0 auto;
+    /* Permite que cada foto tome su propio ancho natural */
+    height: 280px;
+    /* Tamaño más chiquito y controlado */
+    max-width: 80vw;
+    /* Si la foto es súper ancha, que no ocupe más del 80% de la pantalla */
+    scroll-snap-align: center;
+    border-radius: 12px;
+    object-fit: contain;
+    /* CRUCIAL: Esto asegura que la foto NUNCA se recorte, se verá entera */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-hint {
+    font-size: 0.85rem;
+    color: #8a8a8a;
+    margin-top: 0.5rem;
+    letter-spacing: 1px;
+}
+
 /* --- REGALOS --- */
 .gifts-content {
     background: rgba(255, 255, 255, 0.85);
