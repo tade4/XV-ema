@@ -1,5 +1,6 @@
 /* Importamos fuentes elegantes de Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
 /* Reset básico */
 * {
@@ -93,6 +94,20 @@ section {
     color: #aeabab;
     margin-top: 1rem;
     text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+#frase {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    /* Agregamos el diseño elegante: */
+    font-size: 2rem;
+    /* Las fuentes cursivas suelen ser chicas, la agrandamos */
+    color: #000000;
+    text-transform: none;
+    /* Le quitamos las mayúsculas para que fluya natural */
 }
 
 /* --- ANIMACIONES INICIALES DE LA PORTADA --- */
@@ -326,14 +341,33 @@ section {
 }
 
 /* --- ASISTENCIA (RSVP) --- */
+.rsvp-section {
+    /* Agregamos la foto final de fondo con un filtro oscuro para que se lea todo bien */
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+        url('fotos/footer.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 6rem 2rem;
+    /* Le damos más aire arriba y abajo para que se luzca la foto */
+}
+
+.rsvp-section .section-title {
+    color: #ffffff;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.8);
+    /* Para que resalte el título */
+    margin-bottom: 2rem;
+}
+
 .rsvp-content {
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.6);
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* Borde súper sutil para enmarcarlo */
     border-radius: 20px;
     padding: 2.5rem 1.5rem;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    box-shadow: none;
+    /* Quitamos la sombra de la caja para que sea 100% limpio */
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
@@ -344,10 +378,11 @@ section {
 }
 
 .important-notice {
-    background: rgba(230, 230, 230, 0.5);
+    background: transparent;
     padding: 1.5rem;
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: none;
+    /* Quitamos este borde interno para que quede más limpio aún */
     text-align: center;
     width: 100%;
 }
@@ -356,15 +391,18 @@ section {
     display: block;
     font-size: 1.2rem;
     font-weight: 600;
-    color: #1a1a1a;
+    color: #ffffff;
     letter-spacing: 2px;
     margin-bottom: 0.5rem;
+    text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 .important-text {
     font-size: 1rem;
-    color: #4a4a4a;
+    color: #e0e0e0;
     line-height: 1.4;
+    margin: 1.2rem;
+    text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 .whatsapp-btn {
