@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis 15 - Invitación</title>
+
+    <!-- Optimizaciones de carga rápida (Preconnect) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -76,10 +81,10 @@
         <h2 class="section-title">Momentos</h2>
         <div class="gallery-content">
             <div class="gallery-container">
-                <img src="fotos/DSC09247.jpg" alt="Ema" class="gallery-item">
-                <img src="fotos/DSC09270.jpg" alt="Ema" class="gallery-item">
-                <img src="fotos/DSC09284.jpg" alt="Ema" class="gallery-item">
-                <img src="fotos/DSC09316.jpg" alt="Ema" class="gallery-item">
+                <img src="fotos/DSC09247.webp" alt="Ema" class="gallery-item" loading="lazy" decoding="async">
+                <img src="fotos/DSC09270.webp" alt="Ema" class="gallery-item" loading="lazy" decoding="async">
+                <img src="fotos/DSC09284.webp" alt="Ema" class="gallery-item" loading="lazy" decoding="async">
+                <img src="fotos/DSC09316.webp" alt="Ema" class="gallery-item" loading="lazy" decoding="async">
             </div>
             <p class="gallery-hint">← Desliza para ver más →</p>
         </div>
@@ -97,13 +102,13 @@
             <div class="bank-data">
                 <div class="data-box">
                     <span class="data-label">CBU / CVU:</span>
-                    <span class="data-value" id="cvu-number">0000003100000000000000</span>
+                    <span class="data-value" id="cvu-number">0000003100070151017321</span>
                     <button class="copy-btn" onclick="copyToClipboard('cvu-number')">Copiar</button>
                 </div>
 
                 <div class="data-box">
                     <span class="data-label">Alias:</span>
-                    <span class="data-value" id="alias-text">EMA.XV.2026</span>
+                    <span class="data-value" id="alias-text">ema.xv.2026</span>
                     <button class="copy-btn" onclick="copyToClipboard('alias-text')">Copiar</button>
                 </div>
             </div>
@@ -126,6 +131,12 @@
                 class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
                 Confirmar Asistencia
             </a>
+        </div>
+        
+        <!-- FIRMA FINAL SOBRE LA FOTO -->
+        <div class="footer-signature reveal">
+            <p class="esperanza">¡Te espero!</p>
+            <h1 class="title">ema</h1>
         </div>
     </section>
 

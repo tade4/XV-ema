@@ -55,7 +55,7 @@ section {
     /* Agregamos una capa oscura (overlay) semitransparente sobre la foto para que el texto resalte al 100% */
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
-        url('fotos/portada.jpg');
+        url('fotos/portada.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -400,7 +400,7 @@ section {
     /* Agregamos la foto final de fondo con un filtro oscuro para que se lea todo bien */
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
-        url('fotos/footer.jpg');
+        url('fotos/footer.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -482,6 +482,20 @@ section {
     /* Se pinta de verde WhatsApp al pasar el dedo/mouse */
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+/* --- FIRMA FINAL --- */
+.footer-signature {
+    text-align: center;
+    margin-top: 4rem; /* Separación del cuadro de asistencia */
+}
+
+.esperanza {
+    font-family: "Dancing Script", cursive;
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: -10px; /* Lo acercamos al nombre "ema" */
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.8);
 }
 
 /* --- MEDIA QUERIES --- */
